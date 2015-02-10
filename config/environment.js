@@ -43,5 +43,16 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicyHeader= "Content-Security-Policy-Report-Only";
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self' 'unsafe-eval'",
+    'font-src': "'self'",
+    'connect-src': "'self'",
+    'img-src': "'self' http://lorempixel.com",
+    'style-src': "'self' 'unsafe-inline'",
+    'media-src': "'self'"
+  };
+
   return ENV;
 };
