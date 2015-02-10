@@ -1,0 +1,33 @@
+@import "basic";
+
+body {font-family: $font_family;}
+
+.noneTxt {font-family: $font_family_light;}
+
+
+.backWhy {
+  background: url(/images/wunderkaufChecks.png) no-repeat 94% 15px;
+  background-size: 10px auto;
+  @include border-box;
+  color: $color_font_bright;
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+  overflow: hidden;
+  padding: 9px 10px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.backWhy:nth-child(3) {
+  line-height: 14px;
+  padding: 7px 10px;
+}
+.backWhy:active,
+.backWhy:focus,
+.backWhy:hover
+{
+  background: url(/images/wunderkaufChecks.png) no-repeat 94% -25px;
+  background-size: 10px auto;
+  color: $color_blue_dark;
+}
