@@ -2,7 +2,9 @@
   <div class="offersWr">
     {{#each model as |tile|}}
       <div class="{{tile.css_class}}">
-        {{partial tile.template}}
+        {{#if tile.template}}
+          {{partial tile.template}}
+        {{/if}}
       </div>
     {{/each}}
   </div>

@@ -6,7 +6,7 @@ module.exports = function(app) {
     res.send({
       "tiles": [{
         "id": 101,
-        "title": '3 weitere Angebote für Dich gefunden',
+        "title": '1 Angebot für Dich gefunden',
         "template": 'header',
         "css_class": 'sectionHeader'
       }, {
@@ -19,6 +19,14 @@ module.exports = function(app) {
         "template": 'offer',
         "css_class": 'offerTile leftWunder'
       }, {
+        "id": 102,
+        "css_class": 'emptyOffer rightWunder'
+      }, {
+        "id": 103,
+        "title": '2 weitere Angebote für Dich gefunden',
+        "template": 'header',
+        "css_class": 'sectionHeader'
+      }, {
         "id": 2,
         "title": 'I love Milka Pralines',
         "image": "http://static.barcoo.com/80177609-1-thumb.jpg",
@@ -26,7 +34,7 @@ module.exports = function(app) {
         "original_price": '150',
         "discount_price": '99',
         "template": 'offer',
-        "css_class": 'offerTile rightWunder'
+        "css_class": 'offerTile leftWunder'
       }, {
         "id": 3,
         "title": 'Pringles',
@@ -35,7 +43,7 @@ module.exports = function(app) {
         "original_price": '200',
         "discount_price": '139',
         "template": 'offer',
-        "css_class": 'offerTile leftWunder'
+        "css_class": 'offerTile rightWunder'
       }]
     });
   });
