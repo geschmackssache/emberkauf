@@ -5,6 +5,11 @@ module.exports = function(app) {
   tilesRouter.get('/', function(req, res) {
     res.send({
       "tiles": [{
+        "id": 101,
+        "title": '3 weitere Angebote für Dich gefunden',
+        "template": 'header',
+        "css_class": 'sectionHeader'
+      }, {
         "id": 1,
         "title": 'Kinder Schokolade',
         "image": "http://static.barcoo.com/80177609-1-thumb.jpg",
@@ -12,7 +17,7 @@ module.exports = function(app) {
         "original_price": '100',
         "discount_price": '77',
         "template": 'offer',
-        "css_class": 'leftWunder'
+        "css_class": 'offerTile leftWunder'
       }, {
         "id": 2,
         "title": 'I love Milka Pralines',
@@ -21,7 +26,7 @@ module.exports = function(app) {
         "original_price": '150',
         "discount_price": '99',
         "template": 'offer',
-        "css_class": 'rightWunder'
+        "css_class": 'offerTile rightWunder'
       }, {
         "id": 3,
         "title": 'Pringles',
@@ -30,7 +35,7 @@ module.exports = function(app) {
         "original_price": '200',
         "discount_price": '139',
         "template": 'offer',
-        "css_class": 'leftWunder'
+        "css_class": 'offerTile leftWunder'
       }]
     });
   });

@@ -1,0 +1,21 @@
+<div class="front">
+  {{#link-to 'offer' tile.id class="offerSingle"}}
+    <div class="pricebox">
+      <div class="prNew">0,<sup>77</sup></div>
+      <div class="prOld">-99%</div>
+    </div>
+    <div class="prodImg"><span><img src="{{tile.image}}" /></span></div>
+    <p class="prodTitle">{{tile.title}}</p>
+    <p class="prodShop">{{tile.shop_name}}</p>
+  {{/link-to}}
+  <div>
+    <div class="c-12 leftButton">
+      <div class="prodDislike"></div>
+    </div>
+    <div class="c-12 rightButton">
+      <div class="prodLike"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <a class="shareButton"><span class="shareLabel">Angebot teilen</span></a>
+</div>
