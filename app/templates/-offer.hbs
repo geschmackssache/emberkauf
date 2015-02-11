@@ -8,14 +8,6 @@
     <p class="prodTitle">{{tile.title}}</p>
     <p class="prodShop">{{tile.shop_name}}</p>
   {{/link-to}}
-  <div>
-    <div class="c-12 leftButton">
-      <div class="prodDislike"></div>
-    </div>
-    <div class="c-12 rightButton">
-      <div class="prodLike"></div>
-    </div>
-    <div class="clear"></div>
-  </div>
+  {{rating-buttons tile=tile like="sendLikeSignalForOffer" dislike="sendDislikeSignalForOffer"}}
   <a class="shareButton"><span class="shareLabel">Angebot teilen</span></a>
 </div>
