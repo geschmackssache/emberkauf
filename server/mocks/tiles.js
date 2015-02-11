@@ -11,13 +11,17 @@ module.exports = function(app) {
         "shop_name": 'Netto Marken-Discount',
         "original_price": '100',
         "discount_price": '77',
+        "template": 'offer',
+        "css_class": 'leftWunder'
       }, {
         "id": 2,
         "title": 'I love Milka Pralines',
         "image": "http://static.barcoo.com/80177609-1-thumb.jpg",
         "shop_name": 'Kaufland',
         "original_price": '150',
-        "discount_price": '99'
+        "discount_price": '99',
+        "template": 'offer',
+        "css_class": 'rightWunder'
       }, {
         "id": 3,
         "title": 'Pringles',
@@ -25,6 +29,8 @@ module.exports = function(app) {
         "shop_name": 'Kaisers',
         "original_price": '200',
         "discount_price": '139',
+        "template": 'offer',
+        "css_class": 'leftWunder'
       }]
     });
   });
