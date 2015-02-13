@@ -21,10 +21,10 @@ export default Ember.Component.extend({
     }
   },
   switchLikes: function(action) {
-    if (action === 'like' && this.get('likeClass') != 'active') {
+    if (action === 'like' && this.get('likeClass') !== 'active') {
       this.set('dislikeClass', '');
       this.set('likeClass', 'active');
-    } else if (action === 'dislike' && this.get('dislikeClass') != 'active') {
+    } else if (action === 'dislike' && this.get('dislikeClass') !== 'active') {
       this.set('likeClass', '');
       this.set('dislikeClass', 'active');
     }

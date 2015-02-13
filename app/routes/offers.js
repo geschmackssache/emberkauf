@@ -6,10 +6,10 @@ export default Ember.Route.extend({
   },
   actions: {
     sendLikeSignalForOffer: function(tile) {
-      debugger
+      console.log(tile);
     },
     sendDislikeSignalForOffer: function(tile) {
-      debugger
+      console.log(tile);
     }
   }
 });
