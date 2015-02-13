@@ -11,6 +11,13 @@ export default Ember.Component.extend({
       this.switchLikes('dislike');
       this.sendAction('dislike', this.get('tile'));
       this.set('flipp_css_class', 'flip');
+    },
+    flipToFront: function() {
+      this.set('dislikeClass', '');
+      this.set('flipp_css_class', '');
+    },
+    flipToThanksMessage: function() {
+      this.set('flipp_css_class', 'flip flipAgain');
     }
   },
   switchLikes: function(action) {
