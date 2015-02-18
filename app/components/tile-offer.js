@@ -28,5 +28,12 @@ export default Ember.Component.extend({
       this.set('likeClass', '');
       this.set('dislikeClass', 'active');
     }
+  },
+  didInsertElement: function() {
+    if (this.tile.get('signalValue') === true) {
+      this.set('likeClass', 'active');
+    } else if (this.tile.get('signalValue') === false) {
+      this.set('dislikeClass', 'active');
+    }
   }
 });

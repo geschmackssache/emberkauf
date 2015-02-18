@@ -8,5 +8,7 @@ export default DS.Model.extend({
   original_price: DS.attr('number'),
   discount_price: DS.attr('number'),
   template: DS.attr('string'),
-  css_class: DS.attr('string')
+  css_class: DS.attr('string'),
+  signal: DS.belongsTo('signal'),
+  signalValue: Ember.computed.alias('signal.value')
 });

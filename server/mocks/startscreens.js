@@ -1,10 +1,24 @@
 module.exports = function(app) {
   var express = require('express');
-  var tilesRouter = express.Router();
+  var startscreensRouter = express.Router();
 
-  tilesRouter.get('/', function(req, res) {
+  startscreensRouter.get('/', function(req, res) {
     res.send({
-      "tiles": [{
+      "startscreens": [{
+        id: 1,
+        zip: 10245
+      }, {
+        id: 2,
+        zip: 10245
+      }]
+    });
+  });
+
+  startscreensRouter.get('/:id', function(req, res) {
+    res.send({
+      "startscreen": {
+        id: req.params.id
+      }, "tiles": [{
         "id": 101,
         "title": '1 Angebot für Dich gefunden',
         "template": 'header',
@@ -44,38 +58,17 @@ module.exports = function(app) {
         "discount_price": '139',
         "template": 'offer',
         "css_class": 'offerTile rightWunder'
+      }], "signals": [{
+        "id": 1,
+        "value": true,
+        "tile": 1
+      }, {
+        "id": 2,
+        "value": false,
+        "tile": 3
       }]
     });
   });
 
-  tilesRouter.post('/', function(req, res) {
-    res.status(201).end();
-  });
-
-  tilesRouter.get('/:id', function(req, res) {
-    res.send({
-      "tiles": {
-        "id": req.params.id,
-        "title": 'Kinder Schokolade',
-        "image": "http://static.barcoo.com/80177609-1-thumb.jpg",
-        "shop_name": 'Netto Marken-Discount',
-        "original_price": '100',
-        "discount_price": '77',
-      }
-    });
-  });
-
-  tilesRouter.put('/:id', function(req, res) {
-    res.send({
-      'tiles': {
-        id: req.params.id
-      }
-    });
-  });
-
-  tilesRouter.delete('/:id', function(req, res) {
-    res.status(204).end();
-  });
-
-  app.use('/api/tiles', tilesRouter);
+  app.use('/api/startscreens', startscreensRouter);
 };
