@@ -9,10 +9,19 @@ export default Ember.Route.extend({
   },
   actions: {
     sendLikeSignalForOffer: function(tile) {
-      console.log(tile);
+      var signal = tile.get('signal');
+      if (tile.get('signalValue') === true) {
+        signal.deleteRecord();
+      } else if (tile.get('signalValue') === false) {
+        signal.set('value', true);
+      } else {
+        signal = this.store.createRecord('signal', {'value': true, 'tile': tile});
+      }
+      signal.save();
     },
     sendDislikeSignalForOffer: function(tile) {
-      console.log(tile);
+      var signal = this.store.createRecord('signal', {'value': false, 'tile': tile});
+      signal.save();
     }
   }
 });

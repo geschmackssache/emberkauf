@@ -9,10 +9,10 @@
       <p class="prodTitle">{{tile.title}}</p>
       <p class="prodShop">{{tile.shop_name}}</p>
     {{/link-to}}
-    <div class="c-12 leftButton {{dislikeClass}}">
+    <div class="c-12 leftButton {{tile.dislike_css_class}}">
       <div {{action "dislike" tile}} class="prodDislike"></div>
     </div>
-    <div class="c-12 rightButton {{likeClass}}">
+    <div class="c-12 rightButton {{tile.like_css_class}}">
       <div {{action "like" tile}} class="prodLike"></div>
     </div>
     <div class="clear"></div>
